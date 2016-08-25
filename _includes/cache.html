@@ -1,0 +1,320 @@
+---
+layout: default
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .news-container{
+            max-width:700px;
+            margin-bottom: 50px;
+        }
+
+        .breadcrumb{
+            background-color: #fff !important;
+            padding-left: 0px !important;
+            padding-top: 20px !important;
+            margin-bottom: 8px !important;
+        }
+
+        .breadcrumb>li+li:before {
+            padding: 0 5px;
+            color: #ccc;
+            content: "\003E\00a0";
+        }
+
+        .page-header{
+            margin:0px !important;
+        }
+
+        .page-header h1{
+            margin-top: 0px;
+            line-height:48px !important;
+
+        }
+
+        .first-row{
+            margin-top: 22px;
+        }
+
+        .icon-row{
+            border-bottom: 1px solid #eee;
+            padding-bottom:30px;
+        }
+
+        .thumbnail{
+            border:0px solid #ddd !important;
+            padding: 0px !important;
+        }
+
+
+        .caption{
+            padding-left: 0px !important;
+            padding-right: 0px !important;
+        }
+
+        .caption p{
+            margin-top: 14px;
+            line-height: 1.4;
+        }
+
+        .email-subscribe{
+            display: flex;
+            justify-content:center;
+        }
+
+        .input-group-email{
+            width:300px;
+        }
+
+        .subscribe-title{
+            margin-top:15px;
+            margin-bottom: 10px;
+        }
+
+        .SUBSCRIBE-bottom{
+            background-color: #6c7db0 !important;
+            color: #fff !important;
+        }
+
+        .footer-image{
+            padding: 0px !important;
+            background: url("http://www.wallcoo.net/paint/KAGAYA_CELESTIAL_EXPLORING/wallpapers/1024x768/Kagaya_art_Celestial_Exploring_OPALGATE1.jpg") center center;
+            background-size: cover;
+            height:200px;
+            position:relative;
+        }
+
+        .previous-text{
+            font-size: 28px;
+            position:absolute;
+            top:50px;
+            right:48px;
+            color: #fff
+        }
+
+        .previous-icon{
+            position:absolute;
+            color: #fff;
+            right:164px;
+            top:61px;
+        }
+
+        .previous-title.hidden-xs{
+            font-size: 19px;
+            position:absolute;
+            top:90px;
+            right:50px;
+            color: #fff;
+            width:250px;
+            text-align: right;
+        }
+
+        .next-text{
+            font-size: 28px;
+            position:absolute;
+            top:50px;
+            left:60px;
+            color: #fff;
+        }
+
+        .next-icon{
+            position:absolute;
+            color: #fff;
+            left:128px;
+            top:61px;
+        }
+
+        .next-title.hidden-xs{
+            font-size: 19px;
+            position:absolute;
+            top:90px;
+            left:58px;
+            color: #fff;
+            width:250px;
+            text-align: left;
+        }
+
+        .glyphicon.glyphicon-menu-left.col-md-4{
+            height:50px;
+            padding-top: 13px;
+        }
+
+        @media (max-width: 414px) {
+            .previous-text{
+                font-size: 28px;
+                position:absolute;
+                top:84px;
+                right:25px;
+                color: #fff
+            }
+
+            .previous-icon{
+                position:absolute;
+                color: #fff;
+                right:140px;
+                top:96px;
+            }
+
+            .next-text{
+                font-size: 28px;
+                position:absolute;
+                top:84px;
+                left:25px;
+                color: #fff;
+            }
+
+            .next-icon{
+                position:absolute;
+                color: #fff;
+                left:92px;
+                top:96px;
+            }
+
+            .footer-image{
+                padding: 0px !important;
+                background: url("http://www.wallcoo.net/paint/KAGAYA_CELESTIAL_EXPLORING/wallpapers/1024x768/Kagaya_art_Celestial_Exploring_OPALGATE1.jpg") center center no-repeat;
+                height:200px;
+                position:relative;
+            }
+        }
+
+
+
+    </style>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<!-- <div class="whole-container">
+ <div class="ymy"> -->
+<div class="container news-container">
+
+    <ol class="breadcrumb">
+        <li><a href="#">Media Coverage</a></li>
+        <li class="active">Detail</li>
+    </ol>
+
+    <div class="page-header">
+        <h2>You can combine one .hidden-*-up class with one .hidden-*-down class to show an element only on a given interval of screen sizes. </h2>
+        <h4><small>2016-6-27</small></h4>
+    </div>
+
+    <div class="home">
+
+        <h1 class="page-heading ymy">Posts</h1>
+
+
+        <ul class="post-list">
+            {% for post in site.posts %}
+            <li>
+                <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+                <h2>
+                    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title | escape }}</a>
+                </h2>
+            </li>
+            {% endfor %}
+        </ul>
+
+        <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+    </div>
+
+    <div class="row first-row">
+        <div class="col-xs-12">
+            <div class="thumbnail">
+                <img src="http://www.wallcoo.net/paint/KAGAYA_CELESTIAL_EXPLORING/wallpapers/1024x768/Kagaya_art_Celestial_Exploring_OPALGATE1.jpg" alt="...">
+
+                <div class="caption">
+                    <p>假若对于两个相互纠缠的粒子分别测量其物理性质，像位置、动量、自旋、偏振等，则会发现量子关联现象。例如，假设一个零自旋粒子衰变为两个以相反方向移动分离的粒子。沿着某特定方向，对于其中一个粒子测量自旋，假若得到结果为上旋，则另外一个粒子的自旋必定为下旋，假若得到结果为下旋，则另外一个粒子的自旋必定为上旋；更特别地是，假设沿着两个不同方向分别测量两个粒子的自旋，则会发现结果违反贝尔不等式；除此以外，还会出现貌似佯谬般的现象：当对其中一个粒子做测量，另外一个粒子似乎知道测量动作的发生与结果，尽管不存在任何传递信息的机制，尽管两个粒子相隔甚远。</p>
+
+                    <p>This is a little tool to quickly help you style the default Twitter Bootstrap 3.2 Breadcrumbs. Although Bootstraps Breadcrumbs already comes with various default styles, sometimes you might want to shake it up a little. This can be done using css and this tool gives you an interface to customize some predefined styles.
+
+                        Start from the default Twitter Bootstrap style and then just add the styles that will suit your site.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="thumbnail">
+                <img src="http://www.wallcoo.net/paint/KAGAYA_CELESTIAL_EXPLORING/wallpapers/1024x768/Kagaya_art_Celestial_Exploring_OPALGATE1.jpg" alt="...">
+                <div class="caption">
+                    <p>假若对于两个相互纠缠的粒子分别测量其物理性质，像位置、动量、自旋、偏振等，则会发现量子关联现象。例如，假设一个零自旋粒子衰变为两个以相反方向移动分离的粒子。沿着某特定方向，对于其中一个粒子测量自旋，假若得到结果为上旋，则另外一个粒子的自旋必定为下旋，假若得到结果为下旋，则另外一个粒子的自旋必定为上旋；更特别地是，假设沿着两个不同方向分别测量两个粒子的自旋，则会发现结果违反贝尔不等式；除此以外，还会出现貌似佯谬般的现象：当对其中一个粒子做测量，另外一个粒子似乎知道测量动作的发生与结果，尽管不存在任何传递信息的机制，尽管两个粒子相隔甚远。</p>
+
+                    <p>This is a little tool to quickly help you style the default Twitter Bootstrap 3.2 Breadcrumbs. Although Bootstraps Breadcrumbs already comes with various default styles, sometimes you might want to shake it up a little. This can be done using css and this tool gives you an interface to customize some predefined styles.
+
+                        Start from the default Twitter Bootstrap style and then just add the styles that will suit your site.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row icon-row">
+        <div class="col-xs-1"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></div>
+        <div class="col-xs-1"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></div>
+        <div class="col-xs-1"><span class="glyphicon glyphicon-align-left" aria-hidden="true"></span></div>
+    </div>
+
+    <!-- <div>
+      <i class="fa fa-camera-retro fa-lg"></i>
+      <i class="fa fa-camera-retro fa-lg"></i>
+      <i class="fa fa-camera-retro fa-lg"></i>
+    </div> -->
+    <div class="row">
+        <div class="col-xs-6 footer-image">
+            <div class="previous-text">
+                Previous
+            </div>
+            <div class="previous-icon">
+                <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+            </div>
+            <div class="previous-title hidden-xs">
+                Start from the default Twitter Start from the default Twitter Start from the default Twitter
+            </div>
+        </div>
+
+        <div class="col-xs-6 footer-image">
+            <div class="next-text">
+                Next
+            </div>
+            <div class="next-icon">
+                <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+            </div>
+            <div class="next-title hidden-xs">
+                Start from the default Twitter
+            </div>
+        </div>
+    </div>
+
+    <div class="email-subscribe">
+        <div class="subscribe-title">
+            <label for="basic-url"><h3>Subscribe for updates</h3></label>
+        </div>
+    </div>
+
+    <div class="email-subscribe">
+        <div class="input-group input-group-email">
+            <input type="text" class="form-control" placeholder="Recipient's username" aria-describedby="basic-addon2">
+            <span class="input-group-addon SUBSCRIBE-bottom" id="basic-addon2">SUBSCRIBE</span>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+</body>
+</html>
+

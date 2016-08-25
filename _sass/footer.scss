@@ -1,0 +1,31 @@
+.social{
+  text-align: center;
+}
+.site-footer{
+  text-align: center;
+  border:none;
+}
+.fa-weibo{
+  color:#DFE2EA;
+}
+.fa-facebook{
+  color:#DFE2EA;
+}
+.fa-twitter{
+  color:#DFE2EA;
+}
+.reserve{
+  color:#DFE2EA;
+}
+
+@media (min-width: 450px) {
+  .footer-container{
+    width:20%;
+  }
+}
+//@media (min-width: 992px) {
+//  .social-icon {
+//    padding-left:414px;
+//    padding-right:390px;
+//  }
+//}

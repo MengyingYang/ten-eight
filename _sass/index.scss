@@ -1,0 +1,34 @@
+.row-IndexPage{
+  text-align: center;
+}
+.self-img{
+  margin-top:180px;
+  padding:5px;
+  border:1px #DFE2EA solid;
+  border-radius: 50%;
+  height: 80px;
+  display:inline-block;
+  opacity: 0.68;
+}
+.see-u{
+  font-weight: 400;
+  margin-top:30px;
+  color:#DFE2EA;
+  font-size:16px;
+}
+.row-index-button{
+  padding:20px 0px;
+}
+.button-index{
+  background-color: transparent !important;
+  border:2px solid #DFE2EA !important;
+  color:#DFE2EA !important;
+  margin:20px 0px !important;
+}
+
+@media (min-width: 992px) {
+  .row-index-button{
+    padding:20px 392px;
+  }
+}
+

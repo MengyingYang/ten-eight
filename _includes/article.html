@@ -1,0 +1,13 @@
+
+<div class="blog-post">
+    <header class="post-header">
+        <div class="post-title">
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </div>
+        <div class="post-meta">
+            <time>{{ post.date | date: "%b %-d, %Y" }}</time>
+        </div>
+    </header>
+
+    <p><a href="{{ post.url | prepend: site.baseurl }}" class="read-more">{{ post.content | strip_html | truncatewords: 30 }}</a></p>
+</div>
